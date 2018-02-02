@@ -51,5 +51,80 @@ top: 100
 ## 内联元素
 + 内联元素中的内联指“外在盒子”
 
+# 第四章 盒尺寸四大家族
+　　更加深入的解读了这四种属性
+## 深入理解content
+### content与替换元素
+1.替换元素是指可以通过修改某个属性值呈现的内容就可以被替换的元素，如&lt;img>&lt;object>&lt;video>&lt;iframe>或者表单元素
+  替换元素特性
+	* 内容的外观不受页面上的css的影响
+	* 有自己的尺寸，很多替换元素在没有明确尺寸时，默认300px*150px,部分元素为0px，如<img>
+	* 在很多css属性上有自己的一套表现规则
+2.所有的替换元素都是内联水平元素
+![p1](http://p3cvr28fw.bkt.clouddn.com/IMG_20180202_185129.jpg "书中截图")
+3.替换元素的尺寸计算规则
+  + 替换元素的尺寸分为：固有尺寸、HTML尺寸、CSS尺寸
+  + 按照渲染的优先级为：CSS尺寸>HTML尺寸>固有尺寸
+  + 替换元素的固有尺寸有一个特性：无法改变元素的固有尺寸。
+  + 我们平时也会设置&lt;img>的宽高，但这并不是改变了图片的固有尺寸,而是改变了图片的content宽高，content替换内容默认的适配方式是填充(fill)，因此感觉是图片尺寸改变了。在CSS3中可以通过object-fit属性来改变适配方式
 
+4.替换与非替换的距离
+  + 将&lt;img>元素的src属性去掉后，就等同于span的内联元素。
+  + chrome中所有元素都支持content属性，其它浏览器中只在after,before伪类元素中支持。当使用content属性时，可以让普通标签元素变成替换元素。
+  ~~~
+  h1{
+   content: url(logo.png);
+}
+~~~
+  + 使用content生成的文本无法被选中，无法复制，生成的图片无法设置宽高，无法被下载
 
+### content计数器
++ counter-reset 计数器-重置 作用是给计数器起个名，还有从几开始计数
++ counter-increment 计数器递增 每普照一次，普照源增加一次计数值
++ counter()/counters() 是方法，输出计数值
+~~~
+   .counter{
+   counter-reset:wangxiaoer 2 wangxiaosan 3;
+   counter-increment:wangxiaoer wangxiaosan;
+}
+  .counter:before{
+    content:counter(wangxiaoer);
+}
+.counter:after{
+	content:counter(wangxiaosan);
+}
+~~~
+## padding属性
+### padding与元素尺寸
++ css中默认的box-sizing是content-box,所以使用padding会增加元素的尺寸
++ 在块级元素中设置足够大的padding，并且为border-box，则width也会无效，内容表现为首选最小长度
+~~~
+.box{
+	box-sizing:border-box;
+	width:80px;
+	padding:20px 60px;
+}
+实际宽度为120px;
+~~~
++ 内联元素中设置padding不只会影响水平方向，也会影响垂直方向，只是对垂直布局没影响，会和上下元素发生层叠
++ **这种不影响元素布局只出现层叠效果的现象包括**：relative元素定位、box-shadow、outline、内联元素padding。**这些层叠现象分两类**：1是纯视觉层叠，不影响外部尺寸（box-shaow、outline）、2是会影响外部尺寸（inline的padding）。**区分方式**：设置父容器overflow:auto，层叠区域超过父容器时，没有滚动条，则是纯视觉的；如果出现滚动条，则会影响尺寸和布局。点击查看[案例](http://demo.cssworld.cn/4/2-1.php)
++ 应用方面可以使用padding增加点击区域，内联元素padding实现高度可控的分隔线
+
+### padding的百分比值
++ padding不支持负值
++ padding百分比值无论是水平方向还是垂直方向均是相对于宽度计算的
++ 应用方面块状元素可以使用padding进行头图的等比例控制,点击查看[案例](http://demo.cssworld.cn/4/2-3.php)
+~~~
+.box{
+	padding:10% 50%;
+	position:relative;
+}
+.box>img{
+	position：absolute;
+	left:0;top:0;
+	width:100%;
+	height:100%;
+}
+为宽高比5:1的比例固定的头图效果
+~~~
++ 内联元素则会断行
