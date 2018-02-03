@@ -1,5 +1,5 @@
 ---
-title: css_world
+title: css-world
 date: 2018-01-20 22:13:53
 tags: css
 categories: 前端__CSS
@@ -127,4 +127,113 @@ top: 100
 }
 为宽高比5:1的比例固定的头图效果
 ~~~
-+ 内联元素则会断行
++ 内联元素则会断行  
+
+## margin属性
+### margin与元素尺寸和相关布局
+1.margin与元素的内部尺寸
+  + 只有元素是“充分利用可用空间”时，margin才可以改变元素的可视尺寸
+~~~
+<div class="father">
+	<div class="son"></div>
+</div>
+.father{
+	width:300px;
+}
+.son{
+	margin:0 -20px;
+}
+.son元素宽度为340px;
+~~~
+  + margin可以方便的实现多流体布局效果，如一侧定宽一侧自适应
+~~~
+.left{
+	width:200px;
+	float:left;
+}
+.right{
+	margin-left:220px;
+}
+~~~
+  + 使用margin实现等高,点击查看[案例](http://demo.cssworld.cn/4/3-2.php)
+~~~
+.column-box{
+	overflow:hidden;
+}
+.column-left,.column-right{
+	margin-bottom:-9999px;
+	padding-bottom:9999px;
+}
+原理上是用增加了9999px的背景色，但被padding抵消，然后父元素overflow：hidden,将其隐藏
+~~~
+
+### margin的合并
+1.块级元素的margin-top与margin-bottom有时会合并成单个外边距，这种现象只发生在块级元素（不包括浮动和绝对定位）还有垂直方向
+2.合并的3种场景
+ + 相邻兄弟的margin合并
+ + 父级和第一个/最后一个子元素
+ + 空块级元素的margin合并
+ ~~~
+ .father{ overflow:hidden;}
+ .son{margin:1em 0;}
+ <div class="father">
+ 	<div class="son"></div>
+ </div>
+ 此时margin-top和margin-bottom合并，总共为1em;
+ ~~~
+3.合并规则
+ + 正正取最大值
+ + 正负值相加
+ + 负负最负值  
+
+### margin:auto
+　　以前用auto是在将布局居中方面，也仅仅是会用而已，现在有了更深理解。
++ auto填充规则：1.如果一侧定值，一侧auto，则auto为剩余空间大小。2.如果两侧是auto，则平分剩余空间
++ 如果想让块级元素右对齐，除了浮动，可以设置margin-left:auto,更好的选择;左对齐相反
++ 触发margin:auto计算有一个前提条件：width或height为auto时，元素是具有对应方向的自动填充特性
+~~~
+一种方法
+.father{
+		width:200px;
+		height: 100px;
+		position: relative;
+		background: red;
+	}
+	.son{
+		position: absolute;
+		top:0;left:0;bottom: 0;right:0; /*格式化宽度和高度*/
+		background: black;
+		width:180px;
+		height: 80px;
+		margin:auto;  /*宽高都居中*/
+	}
+~~~
+
+### margin无效情形
+1.display计算值inline的非替换元素的垂直margin是无效的
+2.表格中的&lt;tr>和&lt;td>元素或则设置display计算值是table-cell或table-row的元素margin都无效
+3.margin合并的时候，更改margin值可能是没有效果的，取决与合并计算规则
+4.绝对定位元素非定位方向的margin值，能渲染，但看不到变化，也叫“无效”
+5.定高容器的子元素的margin-bottom或则宽度定死的子元素的margin-right定位“失效”，和上一条原因类似
+~~~
+ .box{height:100px;}
+ .son{height:80px;margin-bottom:100px;}
+ margin-bottom不会形成100px的外边距
+ - - -
+ .box{width:100px;}
+ .son{width:80px;margin-left:100px;}
+ *经自己测试后，这种情况虽然对该设置的元素的定位
+ 没影响，但是仍会影响后面的元素布局。
+ ~~~
+ 6.鞭长莫及导致的margin无效。
+ 7.内联特性导致的margin无效
+
+ ## border属性
+ 　　这块内容不是很多，都是先前遇到的。
+ 1.首先是border-width不支持百分比值。
+ 2.border-style默认值none。
+ 3.border-width默认值media（3px），原因是width为media时style为double才能有表现
+ ![规则](http://p3cvr28fw.bkt.clouddn.com/p2.jpg "书中图片")
+ 4.当没有指定border-color颜色值的时候，会使用当前元素的color计算值作为边框色
+ 5.border也可以像padding那样增加点击区域，只是设置颜色为透明
+ 6.图像绘制这些之前接触过，就不赘述了
