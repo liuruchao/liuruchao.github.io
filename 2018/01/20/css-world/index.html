@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="前言　　与其说是总结，倒不如说是我对这本书的一些笔记，希望借此来巩固并复习这些知识。买来这本书已经有一段时间了，由于期末的原因最近才开始学习。《css世界》是张鑫旭大神的新作，我买这本书的原因之一是支持一下张大大，我开始关注到张鑫旭大神是从他一篇博客开始的，我感觉他博客里面的东西如果没有点基础是看不懂的，因此我也意识到了自己在css学习上还有很长的路要走，所以希望这本书能够让我对css有一个更深的">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-world">
+<meta property="og:url" content="http://liuruchao.com/2018/01/20/css-world/index.html">
+<meta property="og:site_name" content="刘如超的博客">
+<meta property="og:description" content="前言　　与其说是总结，倒不如说是我对这本书的一些笔记，希望借此来巩固并复习这些知识。买来这本书已经有一段时间了，由于期末的原因最近才开始学习。《css世界》是张鑫旭大神的新作，我买这本书的原因之一是支持一下张大大，我开始关注到张鑫旭大神是从他一篇博客开始的，我感觉他博客里面的东西如果没有点基础是看不懂的，因此我也意识到了自己在css学习上还有很长的路要走，所以希望这本书能够让我对css有一个更深的">
+<meta property="og:image" content="http://p3cvr28fw.bkt.clouddn.com/IMG_20180202_185129.jpg">
+<meta property="og:image" content="http://p3cvr28fw.bkt.clouddn.com/p2.jpg">
+<meta property="og:updated_time" content="2018-02-03T14:13:18.523Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css-world">
+<meta name="twitter:description" content="前言　　与其说是总结，倒不如说是我对这本书的一些笔记，希望借此来巩固并复习这些知识。买来这本书已经有一段时间了，由于期末的原因最近才开始学习。《css世界》是张鑫旭大神的新作，我买这本书的原因之一是支持一下张大大，我开始关注到张鑫旭大神是从他一篇博客开始的，我感觉他博客里面的东西如果没有点基础是看不懂的，因此我也意识到了自己在css学习上还有很长的路要走，所以希望这本书能够让我对css有一个更深的">
+<meta name="twitter:image" content="http://p3cvr28fw.bkt.clouddn.com/IMG_20180202_185129.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liuruchao.com/2018/01/20/css-world/"/>
+
+
+
+
+
+  <title>css-world | 刘如超的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+     
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">刘如超的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">前端小白进阶之路</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://liuruchao.com/2018/01/20/css-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘如超">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘如超的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">css-world</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-20T22:13:53+08:00">
+                2018-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端-CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">前端__CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>　　与其说是总结，倒不如说是我对这本书的一些笔记，希望借此来巩固并复习这些知识。<br>买来这本书已经有一段时间了，由于期末的原因最近才开始学习。《css世界》是张鑫旭大神的新作，我买这本书的原因之一是支持一下张大大，我开始关注到<a href="http://www.zhangxinxu.com/" target="_blank" rel="external">张鑫旭大神</a>是从他一篇博客开始的，我感觉他博客里面的东西如果没有点基础是看不懂的，因此我也意识到了自己在css学习上还有很长的路要走，所以希望这本书能够让我对css有一个更深的感悟。另外的原因就是这本书的内容十分新颖，并不是那种传统的工具书，现在读起来确实有别于其它技术性书籍。</p>
+<hr>
+<h1 id="第一章-概述"><a href="#第一章-概述" class="headerlink" title="第一章 概述"></a>第一章 概述</h1><p>　　正如书中前沿写的那样，张大大以一种第一人称的角度，带有情感的来写这本书的内容，用了很多形象的比喻，还配有代码案例，让读者读起来不仅不枯燥，反而更加有趣，这就是有别于其它技术性书籍的原因。对于接下来的笔记我会更多的使用列表来记录。　　</p>
+<ul>
+<li>首先书中将css整块内容比作了世界，将不同的操作系统视为各个平行的css世界，不同的浏览器视为各个王国，那么html标签是魔法石，选择器为选择法器，css属性就是魔法师，魔法师通过使用法器来变化魔法石。</li>
+<li>css能够在历史中完胜SVG靠的就是“<em>层叠</em>”这个特性。  </li>
+<li>流的概念只要学过css的都会知道，全名称“标准文档流”。是一种基本的定位和布局机制，就像现实生活中的水流一样，块级元素会像水流一样铺满容器盒子，而内联元素则是像木块一样按排列顺序浮在水面上。</li>
+<li>所谓的流体布局就是曾经的 css+div 布局<br>这就是这一章的内容，并没有特别的东西，接下来开始下一章。　　　</li>
+</ul>
+<h1 id="第二章-专业术语"><a href="#第二章-专业术语" class="headerlink" title="第二章 专业术语"></a>第二章 专业术语</h1><p>　　因为我也不是css初学者了，对这些专业术语比较熟悉，所以就不一一记录了，不过我对这章另一个内容还是很陌生的。搞前端的程序员必须考虑的一件事就是浏览器的兼容性，很多人包括我自己都认为相同的代码在不同的浏览器中出现了不同的表现，这就是bug。但张大大指出，&gt; 这种现象在计算机领域中的专业术语描述应该是”未定义行为”,web标准不可能面面俱到，各大浏览器肯定会出现差异。</p>
+<h1 id="第三章-流、元素与基本尺寸"><a href="#第三章-流、元素与基本尺寸" class="headerlink" title="第三章 流、元素与基本尺寸"></a>第三章 流、元素与基本尺寸</h1><p>　　到了这一章好多硬货开始蹭蹭的摆了出来，而且都是我没有接触过的，我是一边流着鼻血一边学习完这些东西，哈哈，都是含金量很高的内容，我得坚持住全部吸收。　　　</p>
+<h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><p>　　以前肤浅的认为块级元素和display:block可以等价，盒子模型也就是那些margin、padding、border、content，然而非也，看来我还真是个前端小白，还得虚心学习啊。</p>
+<ul>
+<li>块级元素可以配合clear属性来清除浮动，但不仅是将display设置成block,同样可以是table、list-item,但一般不用list-item，除了兼容性外（ie），还有list-item的特殊性….</li>
+<li>盒子分为块级盒子与内联盒子，块级负责结构，内联负责内容。但元素的盒子没这么简单。每个元素其实都有两个盒子，分为外在盒子和内在盒子，内在盒子也叫容器盒子。比如：display:block可以脑补成display：block-block，display:table脑补成block-table。inline-block就很好理解了，外在盒子为内联，可以使元素和图文一行显示，而容器盒子为块级，负责设置宽高。</li>
+<li>刚才提到了list-item的特殊性，就因为设置为list-item后会出现像列表一样的符号，原因是它还有一个附加盒子，专门来放这些圆点，数字项目符号，当然了这个附加盒子是张大神为了理解自己给取得名字。　　</li>
+</ul>
+<h2 id="width与height"><a href="#width与height" class="headerlink" title="width与height"></a>width与height</h2><p>　　翻到这块内容时，想着不就是设置宽高嘛，还能有啥讲的，看完后才真心觉得这本书买对了。</p>
+<h3 id="width"><a href="#width" class="headerlink" title="width"></a>width</h3><ul>
+<li>width/height作用在容器盒子</li>
+<li>width的默认值是auto，包含了四种不同宽度表现：充分利用可用空间、收缩与包裹（如浮动、绝对定位、inline-block、table）、收缩到最小、超出容器限制</li>
+<li>在css世界中，盒子分为内在盒子和外在盒子，显示也分为内部显示与外部显示，尺寸也分为内部尺寸与外部尺寸。而外部尺寸为流的精髓。</li>
+<li>外部尺寸的块级元素一旦设置了宽度，流动性就丢失了。所谓流动性，并不是看上去的宽度100%，而是一种margin、border、padding、content内容区域自动分配水平空间的机制。所以要记住“无宽度”这条准则，避免“砌砖头，搭积木”这种思维的页面制作。</li>
+<li>内部尺寸与流体特性表现为：<br>1.包裹性：就是内联元素的宽度随着内容的宽度变化自适应，如button和input<br>2.首选最小宽度：外部容器的宽度为240px,假设宽度为0，里面的Inline-block元素宽度不为0，为首选最小宽度，由内容决定。<br>3.最大宽度</li>
+<li>width默认作用在content box上，所以会出现设置宽度为100px后，再设置padding:20px,实际宽度为140px，这种不一致。这种设置宽度，会使流动性丢失。解决方法有：“宽度分离原则”、设置box-sizing，但后者并不能完全解决，因为浏览器都不支持box-sizing:margin-box。  </li>
+</ul>
+<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><ul>
+<li>如果父类没有明确的高度，只是默认的auto,则后代设置100%无效。解决方法：html,body{height:100%}</li>
+<li>设置max-wdith/height的元素权重将超越！important</li>
+<li>同一元素设置{min-width:1400px;max-width:1200px},表现为min-width，max-width被忽略了。　　</li>
+</ul>
+<h2 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h2><ul>
+<li>内联元素中的内联指“外在盒子”</li>
+</ul>
+<h1 id="第四章-盒尺寸四大家族"><a href="#第四章-盒尺寸四大家族" class="headerlink" title="第四章 盒尺寸四大家族"></a>第四章 盒尺寸四大家族</h1><p>　　更加深入的解读了这四种属性</p>
+<h2 id="深入理解content"><a href="#深入理解content" class="headerlink" title="深入理解content"></a>深入理解content</h2><h3 id="content与替换元素"><a href="#content与替换元素" class="headerlink" title="content与替换元素"></a>content与替换元素</h3><p>1.替换元素是指可以通过修改某个属性值呈现的内容就可以被替换的元素，如&lt;img&gt;&lt;object&gt;&lt;video&gt;&lt;iframe&gt;或者表单元素<br>  替换元素特性</p>
+<pre><code>* 内容的外观不受页面上的css的影响
+* 有自己的尺寸，很多替换元素在没有明确尺寸时，默认300px*150px,部分元素为0px，如&lt;img&gt;
+* 在很多css属性上有自己的一套表现规则
+</code></pre><p>2.所有的替换元素都是内联水平元素<br><img src="http://p3cvr28fw.bkt.clouddn.com/IMG_20180202_185129.jpg" alt="p1" title="书中截图"><br>3.替换元素的尺寸计算规则</p>
+<ul>
+<li>替换元素的尺寸分为：固有尺寸、HTML尺寸、CSS尺寸</li>
+<li>按照渲染的优先级为：CSS尺寸&gt;HTML尺寸&gt;固有尺寸</li>
+<li>替换元素的固有尺寸有一个特性：无法改变元素的固有尺寸。</li>
+<li>我们平时也会设置&lt;img&gt;的宽高，但这并不是改变了图片的固有尺寸,而是改变了图片的content宽高，content替换内容默认的适配方式是填充(fill)，因此感觉是图片尺寸改变了。在CSS3中可以通过object-fit属性来改变适配方式</li>
+</ul>
+<p>4.替换与非替换的距离</p>
+<ul>
+<li>将&lt;img&gt;元素的src属性去掉后，就等同于span的内联元素。</li>
+<li><p>chrome中所有元素都支持content属性，其它浏览器中只在after,before伪类元素中支持。当使用content属性时，可以让普通标签元素变成替换元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  h1&#123;</div><div class="line">   content: url(logo.png);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用content生成的文本无法被选中，无法复制，生成的图片无法设置宽高，无法被下载</p>
+</li>
+</ul>
+<h3 id="content计数器"><a href="#content计数器" class="headerlink" title="content计数器"></a>content计数器</h3><ul>
+<li>counter-reset 计数器-重置 作用是给计数器起个名，还有从几开始计数</li>
+<li>counter-increment 计数器递增 每普照一次，普照源增加一次计数值</li>
+<li>counter()/counters() 是方法，输出计数值<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">   .counter&#123;</div><div class="line">   counter-reset:wangxiaoer 2 wangxiaosan 3;</div><div class="line">   counter-increment:wangxiaoer wangxiaosan;</div><div class="line">&#125;</div><div class="line">  .counter:before&#123;</div><div class="line">    content:counter(wangxiaoer);</div><div class="line">&#125;</div><div class="line">.counter:after&#123;</div><div class="line">	content:counter(wangxiaosan);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="padding属性"><a href="#padding属性" class="headerlink" title="padding属性"></a>padding属性</h2><h3 id="padding与元素尺寸"><a href="#padding与元素尺寸" class="headerlink" title="padding与元素尺寸"></a>padding与元素尺寸</h3><ul>
+<li>css中默认的box-sizing是content-box,所以使用padding会增加元素的尺寸</li>
+<li><p>在块级元素中设置足够大的padding，并且为border-box，则width也会无效，内容表现为首选最小长度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">	box-sizing:border-box;</div><div class="line">	width:80px;</div><div class="line">	padding:20px 60px;</div><div class="line">&#125;</div><div class="line">实际宽度为120px;</div></pre></td></tr></table></figure>
+</li>
+<li><p>内联元素中设置padding不只会影响水平方向，也会影响垂直方向，只是对垂直布局没影响，会和上下元素发生层叠</p>
+</li>
+<li><strong>这种不影响元素布局只出现层叠效果的现象包括</strong>：relative元素定位、box-shadow、outline、内联元素padding。<strong>这些层叠现象分两类</strong>：1是纯视觉层叠，不影响外部尺寸（box-shaow、outline）、2是会影响外部尺寸（inline的padding）。<strong>区分方式</strong>：设置父容器overflow:auto，层叠区域超过父容器时，没有滚动条，则是纯视觉的；如果出现滚动条，则会影响尺寸和布局。点击查看<a href="http://demo.cssworld.cn/4/2-1.php" target="_blank" rel="external">案例</a></li>
+<li>应用方面可以使用padding增加点击区域，内联元素padding实现高度可控的分隔线</li>
+</ul>
+<h3 id="padding的百分比值"><a href="#padding的百分比值" class="headerlink" title="padding的百分比值"></a>padding的百分比值</h3><ul>
+<li>padding不支持负值</li>
+<li>padding百分比值无论是水平方向还是垂直方向均是相对于宽度计算的</li>
+<li><p>应用方面块状元素可以使用padding进行头图的等比例控制,点击查看<a href="http://demo.cssworld.cn/4/2-3.php" target="_blank" rel="external">案例</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">	padding:10% 50%;</div><div class="line">	position:relative;</div><div class="line">&#125;</div><div class="line">.box&gt;img&#123;</div><div class="line">	position：absolute;</div><div class="line">	left:0;top:0;</div><div class="line">	width:100%;</div><div class="line">	height:100%;</div><div class="line">&#125;</div><div class="line">为宽高比5:1的比例固定的头图效果</div></pre></td></tr></table></figure>
+</li>
+<li><p>内联元素则会断行  </p>
+</li>
+</ul>
+<h2 id="margin属性"><a href="#margin属性" class="headerlink" title="margin属性"></a>margin属性</h2><h3 id="margin与元素尺寸和相关布局"><a href="#margin与元素尺寸和相关布局" class="headerlink" title="margin与元素尺寸和相关布局"></a>margin与元素尺寸和相关布局</h3><p>1.margin与元素的内部尺寸</p>
+<ul>
+<li><p>只有元素是“充分利用可用空间”时，margin才可以改变元素的可视尺寸</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;father&quot;&gt;</div><div class="line">	&lt;div class=&quot;son&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">.father&#123;</div><div class="line">	width:300px;</div><div class="line">&#125;</div><div class="line">.son&#123;</div><div class="line">	margin:0 -20px;</div><div class="line">&#125;</div><div class="line">.son元素宽度为340px;</div></pre></td></tr></table></figure>
+</li>
+<li><p>margin可以方便的实现多流体布局效果，如一侧定宽一侧自适应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.left&#123;</div><div class="line">	width:200px;</div><div class="line">	float:left;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">	margin-left:220px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用margin实现等高,点击查看<a href="http://demo.cssworld.cn/4/3-2.php" target="_blank" rel="external">案例</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.column-box&#123;</div><div class="line">	overflow:hidden;</div><div class="line">&#125;</div><div class="line">.column-left,.column-right&#123;</div><div class="line">	margin-bottom:-9999px;</div><div class="line">	padding-bottom:9999px;</div><div class="line">&#125;</div><div class="line">原理上是用增加了9999px的背景色，但被padding抵消，然后父元素overflow：hidden,将其隐藏</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="margin的合并"><a href="#margin的合并" class="headerlink" title="margin的合并"></a>margin的合并</h3><p>1.块级元素的margin-top与margin-bottom有时会合并成单个外边距，这种现象只发生在块级元素（不包括浮动和绝对定位）还有垂直方向<br>2.合并的3种场景</p>
+<ul>
+<li>相邻兄弟的margin合并</li>
+<li>父级和第一个/最后一个子元素</li>
+<li>空块级元素的margin合并<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.father&#123; overflow:hidden;&#125;</div><div class="line">.son&#123;margin:1em 0;&#125;</div><div class="line">&lt;div class=&quot;father&quot;&gt;</div><div class="line">	&lt;div class=&quot;son&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">此时margin-top和margin-bottom合并，总共为1em;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.合并规则</p>
+<ul>
+<li>正正取最大值</li>
+<li>正负值相加</li>
+<li>负负最负值  </li>
+</ul>
+<h3 id="margin-auto"><a href="#margin-auto" class="headerlink" title="margin:auto"></a>margin:auto</h3><p>　　以前用auto是在将布局居中方面，也仅仅是会用而已，现在有了更深理解。</p>
+<ul>
+<li>auto填充规则：1.如果一侧定值，一侧auto，则auto为剩余空间大小。2.如果两侧是auto，则平分剩余空间</li>
+<li>如果想让块级元素右对齐，除了浮动，可以设置margin-left:auto,更好的选择;左对齐相反</li>
+<li>触发margin:auto计算有一个前提条件：width或height为auto时，元素是具有对应方向的自动填充特性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">一种方法</div><div class="line">.father&#123;</div><div class="line">		width:200px;</div><div class="line">		height: 100px;</div><div class="line">		position: relative;</div><div class="line">		background: red;</div><div class="line">	&#125;</div><div class="line">	.son&#123;</div><div class="line">		position: absolute;</div><div class="line">		top:0;left:0;bottom: 0;right:0; /*格式化宽度和高度*/</div><div class="line">		background: black;</div><div class="line">		width:180px;</div><div class="line">		height: 80px;</div><div class="line">		margin:auto;  /*宽高都居中*/</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="margin无效情形"><a href="#margin无效情形" class="headerlink" title="margin无效情形"></a>margin无效情形</h3><p>1.display计算值inline的非替换元素的垂直margin是无效的<br>2.表格中的&lt;tr&gt;和&lt;td&gt;元素或则设置display计算值是table-cell或table-row的元素margin都无效<br>3.margin合并的时候，更改margin值可能是没有效果的，取决与合并计算规则<br>4.绝对定位元素非定位方向的margin值，能渲染，但看不到变化，也叫“无效”<br>5.定高容器的子元素的margin-bottom或则宽度定死的子元素的margin-right定位“失效”，和上一条原因类似<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.box&#123;height:100px;&#125;</div><div class="line">.son&#123;height:80px;margin-bottom:100px;&#125;</div><div class="line">margin-bottom不会形成100px的外边距</div><div class="line">- - -</div><div class="line">.box&#123;width:100px;&#125;</div><div class="line">.son&#123;width:80px;margin-left:100px;&#125;</div><div class="line">*经自己测试后，这种情况虽然对该设置的元素的定位</div><div class="line">没影响，但是仍会影响后面的元素布局。</div></pre></td></tr></table></figure></p>
+<p> 6.鞭长莫及导致的margin无效。<br> 7.内联特性导致的margin无效</p>
+<h2 id="border属性"><a href="#border属性" class="headerlink" title="border属性"></a>border属性</h2><p> 　　这块内容不是很多，都是先前遇到的。<br> 1.首先是border-width不支持百分比值。<br> 2.border-style默认值none。<br> 3.border-width默认值media（3px），原因是width为media时style为double才能有表现<br> <img src="http://p3cvr28fw.bkt.clouddn.com/p2.jpg" alt="规则" title="书中图片"><br> 4.当没有指定border-color颜色值的时候，会使用当前元素的color计算值作为边框色<br> 5.border也可以像padding那样增加点击区域，只是设置颜色为透明<br> 6.图像绘制这些之前接触过，就不赘述了</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/18/hello-blog/" rel="next" title="hello blog">
+                <i class="fa fa-chevron-left"></i> hello blog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/22/显示点击元素及个数/" rel="prev" title="显示点击元素及个数">
+                显示点击元素及个数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  
+  
+  <a class="jiathis_button_qzone"></a>
+  
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzc2NS8xMDMxOQ=="></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="刘如超" />
+          <p class="site-author-name" itemprop="name">刘如超</p>
+           
+              <p class="site-description motion-element" itemprop="description">校服是我和她穿过的唯一情侣装</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-概述"><span class="nav-number">2.</span> <span class="nav-text">第一章 概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-专业术语"><span class="nav-number">3.</span> <span class="nav-text">第二章 专业术语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-流、元素与基本尺寸"><span class="nav-number">4.</span> <span class="nav-text">第三章 流、元素与基本尺寸</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#块级元素"><span class="nav-number">4.1.</span> <span class="nav-text">块级元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#width与height"><span class="nav-number">4.2.</span> <span class="nav-text">width与height</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#width"><span class="nav-number">4.2.1.</span> <span class="nav-text">width</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#height"><span class="nav-number">4.2.2.</span> <span class="nav-text">height</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内联元素"><span class="nav-number">4.3.</span> <span class="nav-text">内联元素</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-盒尺寸四大家族"><span class="nav-number">5.</span> <span class="nav-text">第四章 盒尺寸四大家族</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#深入理解content"><span class="nav-number">5.1.</span> <span class="nav-text">深入理解content</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#content与替换元素"><span class="nav-number">5.1.1.</span> <span class="nav-text">content与替换元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#content计数器"><span class="nav-number">5.1.2.</span> <span class="nav-text">content计数器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#padding属性"><span class="nav-number">5.2.</span> <span class="nav-text">padding属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#padding与元素尺寸"><span class="nav-number">5.2.1.</span> <span class="nav-text">padding与元素尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#padding的百分比值"><span class="nav-number">5.2.2.</span> <span class="nav-text">padding的百分比值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#margin属性"><span class="nav-number">5.3.</span> <span class="nav-text">margin属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#margin与元素尺寸和相关布局"><span class="nav-number">5.3.1.</span> <span class="nav-text">margin与元素尺寸和相关布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#margin的合并"><span class="nav-number">5.3.2.</span> <span class="nav-text">margin的合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#margin-auto"><span class="nav-number">5.3.3.</span> <span class="nav-text">margin:auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#margin无效情形"><span class="nav-number">5.3.4.</span> <span class="nav-text">margin无效情形</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#border属性"><span class="nav-number">5.4.</span> <span class="nav-text">border属性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘如超</span>
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="true"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+</body>
+</html>
