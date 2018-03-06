@@ -111,19 +111,17 @@
 
 
 
-<meta name="description" content="利用css3中的变形和过渡制作了一个3D正方体，加深了对这几个模块的熟练程度，但是也遇到了几个问题。　　1.将各个面的元素旋转后，实际的3D坐标轴也跟着旋转了同样角度，此后设置变形得按照旋转后的坐标轴。2.刚开始无论是利用hover直接将正方体旋转角度，还是利用动画，都不能使其变化，本来以为是自己给父元素设置的弹性布局产生了些影响，但后来给正方体添加了过渡后，正方体的旋转才能进行　　核新代码1">
+<meta name="description" content="1.最常用的方式，采用定位实现，然后用margin再往回拉半个元素的宽高度，这种方式不方便维护，一旦元素宽高度改变，也必须得重新计算设置margin.12345678910111213141516.outside&amp;#123;	width: 200px;	height: 200px;	position: relative;	background: red;&amp;#125;.inside&amp;#123;	wi">
 <meta name="keywords" content="css_demo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3D正方体">
-<meta property="og:url" content="http://liuruchao.com/2018/03/06/3D正方体/index.html">
+<meta property="og:title" content="几种垂直水平居中方法">
+<meta property="og:url" content="http://liuruchao.com/2018/03/06/几种垂直水平居中方法/index.html">
 <meta property="og:site_name" content="刘如超的博客">
-<meta property="og:description" content="利用css3中的变形和过渡制作了一个3D正方体，加深了对这几个模块的熟练程度，但是也遇到了几个问题。　　1.将各个面的元素旋转后，实际的3D坐标轴也跟着旋转了同样角度，此后设置变形得按照旋转后的坐标轴。2.刚开始无论是利用hover直接将正方体旋转角度，还是利用动画，都不能使其变化，本来以为是自己给父元素设置的弹性布局产生了些影响，但后来给正方体添加了过渡后，正方体的旋转才能进行　　核新代码1">
-<meta property="og:image" content="http://p3cvr28fw.bkt.clouddn.com/demo3.gif">
-<meta property="og:updated_time" content="2018-03-06T14:31:31.540Z">
+<meta property="og:description" content="1.最常用的方式，采用定位实现，然后用margin再往回拉半个元素的宽高度，这种方式不方便维护，一旦元素宽高度改变，也必须得重新计算设置margin.12345678910111213141516.outside&amp;#123;	width: 200px;	height: 200px;	position: relative;	background: red;&amp;#125;.inside&amp;#123;	wi">
+<meta property="og:updated_time" content="2018-03-06T15:22:13.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="3D正方体">
-<meta name="twitter:description" content="利用css3中的变形和过渡制作了一个3D正方体，加深了对这几个模块的熟练程度，但是也遇到了几个问题。　　1.将各个面的元素旋转后，实际的3D坐标轴也跟着旋转了同样角度，此后设置变形得按照旋转后的坐标轴。2.刚开始无论是利用hover直接将正方体旋转角度，还是利用动画，都不能使其变化，本来以为是自己给父元素设置的弹性布局产生了些影响，但后来给正方体添加了过渡后，正方体的旋转才能进行　　核新代码1">
-<meta name="twitter:image" content="http://p3cvr28fw.bkt.clouddn.com/demo3.gif">
+<meta name="twitter:title" content="几种垂直水平居中方法">
+<meta name="twitter:description" content="1.最常用的方式，采用定位实现，然后用margin再往回拉半个元素的宽高度，这种方式不方便维护，一旦元素宽高度改变，也必须得重新计算设置margin.12345678910111213141516.outside&amp;#123;	width: 200px;	height: 200px;	position: relative;	background: red;&amp;#125;.inside&amp;#123;	wi">
 
 
 
@@ -151,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://liuruchao.com/2018/03/06/3D正方体/"/>
+  <link rel="canonical" href="http://liuruchao.com/2018/03/06/几种垂直水平居中方法/"/>
 
 
 
 
 
-  <title>3D正方体 | 刘如超的博客</title>
+  <title>几种垂直水平居中方法 | 刘如超的博客</title>
   
 
 
@@ -306,7 +304,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://liuruchao.com/2018/03/06/3D正方体/">
+    <link itemprop="mainEntityOfPage" href="http://liuruchao.com/2018/03/06/几种垂直水平居中方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘如超">
@@ -323,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">3D正方体</h1>
+          <h1 class="post-title" itemprop="name headline">几种垂直水平居中方法</h1>
         
 
         <div class="post-meta">
@@ -335,7 +333,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T19:09:08+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T22:39:02+08:00">
                 2018-03-06
               </time>
             
@@ -392,8 +390,11 @@
       
 
       
-        <p>　　利用css3中的变形和过渡制作了一个3D正方体，加深了对这几个模块的熟练程度，但是也遇到了几个问题。　　<br>1.将各个面的元素旋转后，实际的3D坐标轴也跟着旋转了同样角度，此后设置变形得按照旋转后的坐标轴。<br>2.刚开始无论是利用hover直接将正方体旋转角度，还是利用动画，都不能使其变化，本来以为是自己给父元素设置的弹性布局产生了些影响，但后来给正方体添加了过渡后，正方体的旋转才能进行　　<br><strong>核新代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">.contain&#123;</div><div class="line">		width: 200px;</div><div class="line">		height: 200px;</div><div class="line">		position: relative;</div><div class="line">           transform-style: preserve-3d;</div><div class="line">           perspective-origin: left bottom;</div><div class="line">          transition: all 8s;</div><div class="line">           &#125;</div><div class="line">.contain div:first-child&#123;   //正面</div><div class="line">		background: red;</div><div class="line">		transform: translateZ(100px);</div><div class="line">       &#125;</div><div class="line">.contain div:nth-child(2)&#123;  //背面</div><div class="line">       	background: green;</div><div class="line">       	transform: translateZ(-100px);</div><div class="line">       &#125;</div><div class="line">.contain div:nth-child(3)&#123;  //左面</div><div class="line">       	background: orange;</div><div class="line">       	transform: rotateY(-90deg) translateZ(100px);</div><div class="line">       &#125;</div><div class="line">.contain div:nth-child(4)&#123;  //右面</div><div class="line">       	background: yellow;</div><div class="line">       	transform: rotateY(90deg) translateZ(100px);</div><div class="line">       &#125;</div><div class="line">.contain div:nth-child(5)&#123;  //上面</div><div class="line">       	background:lime;</div><div class="line">       	transform:rotateX(90deg) translateZ(100px);</div><div class="line">       &#125;</div><div class="line">.contain div:nth-child(6)&#123;  //下面</div><div class="line">       	background: grey;</div><div class="line">       	transform:rotateX(-90deg) translateZ(100px);</div><div class="line">       &#125;</div><div class="line">.contain:hover&#123;</div><div class="line">       	transform:rotateX(360deg) rotateY(360deg);</div><div class="line">       &#125;</div></pre></td></tr></table></figure></p>
-<p>完整代码请点<a href="https://github.com/liuruchao/Demo/blob/master/demo3.html" target="_blank" rel="external">这里</a><br><img src="http://p3cvr28fw.bkt.clouddn.com/demo3.gif" alt="3D正方体" title="实现效果图"></p>
+        <p>1.最常用的方式，采用定位实现，然后用margin再往回拉半个元素的宽高度，这种方式不方便维护，一旦元素宽高度改变，也必须得重新计算设置margin.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">.outside&#123;</div><div class="line">	width: 200px;</div><div class="line">	height: 200px;</div><div class="line">	position: relative;</div><div class="line">	background: red;</div><div class="line">&#125;</div><div class="line">.inside&#123;</div><div class="line">	width: 60px;</div><div class="line">	height: 60px;</div><div class="line">	background: green;</div><div class="line">	position: absolute;</div><div class="line">	left: 50%;</div><div class="line">	top:50%;</div><div class="line">	margin-left:-30px;</div><div class="line">	margin-top: -30px;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<p>2.基于第一种方式，可以将使用margin改为css3中的变形translate,使用百分比来将元素拉回中间位置，使用百分比数值就避免了还得计算元素的宽高度，缺陷可能是不太兼容低版本浏览器，也得加上私有前缀<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.inside&#123;</div><div class="line">        -webkit-transform: translate(-50%,-50%);</div><div class="line">		-moz-transform: translate(-50%,-50%);</div><div class="line">		-o-transform: translate(-50%,-50%);</div><div class="line">		transform: translate(-50%,-50%);</div><div class="line">		&#125;</div></pre></td></tr></table></figure></p>
+<p>3.这种方式是从《css世界》上看到的，只能说如果不了解原理，会不太明白这种方式，核心是利用到了“strut”支柱这个概念,另外这种垂直居中是一种近似居中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">.outside&#123;</div><div class="line">		width: 200px;</div><div class="line">		height: 200px;</div><div class="line">		background: red;</div><div class="line">		line-height: 200px;</div><div class="line">		text-align: center;</div><div class="line">	&#125;</div><div class="line">.inside&#123;</div><div class="line">		width: 60px;</div><div class="line">		height: 60px;</div><div class="line">		background: green;</div><div class="line">		display: inline-block;</div><div class="line">		vertical-align: middle;</div><div class="line">           &#125;</div></pre></td></tr></table></figure></p>
+<p>4.这个方法是最方便的了，只是用到了新的弹性布局，如果是移动端，这种方式最好用,只需要设置父元素即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.outside&#123;</div><div class="line">			width: 200px;</div><div class="line">			height: 200px;</div><div class="line">			background: red;</div><div class="line">			display: flex;</div><div class="line">			justify-content: center;</div><div class="line">			align-items: center;</div><div class="line">		&#125;</div></pre></td></tr></table></figure></p>
+<p><em>ps:如果发现其它方法我会继续补充</em></p>
 
       
     </div>
@@ -436,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/24/模拟加载动画/" rel="next" title="模拟加载动画">
-                <i class="fa fa-chevron-left"></i> 模拟加载动画
+              <a href="/2018/03/06/3D正方体/" rel="next" title="3D正方体">
+                <i class="fa fa-chevron-left"></i> 3D正方体
               </a>
             
           </div>
@@ -445,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/06/几种垂直水平居中方法/" rel="prev" title="几种垂直水平居中方法">
-                几种垂直水平居中方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
