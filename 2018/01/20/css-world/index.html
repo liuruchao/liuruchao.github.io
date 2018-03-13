@@ -95,7 +95,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css," />
+  <meta name="keywords" content="笔记," />
 
 
 
@@ -112,7 +112,7 @@
 
 
 <meta name="description" content="前言　　与其说是总结，倒不如说是我对这本书的一些笔记，希望借此来巩固并复习这些知识。买来这本书已经有一段时间了，由于期末的原因最近才开始学习。《css世界》是张鑫旭大神的新作，我买这本书的原因之一是支持一下张大大，我开始关注到张鑫旭大神是从他一篇博客开始的，我感觉他博客里面的东西如果没有点基础是看不懂的，因此我也意识到了自己在css学习上还有很长的路要走，所以希望这本书能够让我对css有一个更深的">
-<meta name="keywords" content="css">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css-world">
 <meta property="og:url" content="http://liuruchao.com/2018/01/20/css-world/index.html">
@@ -120,7 +120,7 @@
 <meta property="og:description" content="前言　　与其说是总结，倒不如说是我对这本书的一些笔记，希望借此来巩固并复习这些知识。买来这本书已经有一段时间了，由于期末的原因最近才开始学习。《css世界》是张鑫旭大神的新作，我买这本书的原因之一是支持一下张大大，我开始关注到张鑫旭大神是从他一篇博客开始的，我感觉他博客里面的东西如果没有点基础是看不懂的，因此我也意识到了自己在css学习上还有很长的路要走，所以希望这本书能够让我对css有一个更深的">
 <meta property="og:image" content="http://p3cvr28fw.bkt.clouddn.com/IMG_20180202_185129.jpg">
 <meta property="og:image" content="http://p3cvr28fw.bkt.clouddn.com/p2.jpg">
-<meta property="og:updated_time" content="2018-02-03T14:13:18.523Z">
+<meta property="og:updated_time" content="2018-03-13T14:07:05.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css-world">
 <meta name="twitter:description" content="前言　　与其说是总结，倒不如说是我对这本书的一些笔记，希望借此来巩固并复习这些知识。买来这本书已经有一段时间了，由于期末的原因最近才开始学习。《css世界》是张鑫旭大神的新作，我买这本书的原因之一是支持一下张大大，我开始关注到张鑫旭大神是从他一篇博客开始的，我感觉他博客里面的东西如果没有点基础是看不懂的，因此我也意识到了自己在css学习上还有很长的路要走，所以希望这本书能够让我对css有一个更深的">
@@ -502,12 +502,22 @@
 <ul>
 <li>auto填充规则：1.如果一侧定值，一侧auto，则auto为剩余空间大小。2.如果两侧是auto，则平分剩余空间</li>
 <li>如果想让块级元素右对齐，除了浮动，可以设置margin-left:auto,更好的选择;左对齐相反</li>
-<li>触发margin:auto计算有一个前提条件：width或height为auto时，元素是具有对应方向的自动填充特性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">一种方法</div><div class="line">.father&#123;</div><div class="line">		width:200px;</div><div class="line">		height: 100px;</div><div class="line">		position: relative;</div><div class="line">		background: red;</div><div class="line">	&#125;</div><div class="line">	.son&#123;</div><div class="line">		position: absolute;</div><div class="line">		top:0;left:0;bottom: 0;right:0; /*格式化宽度和高度*/</div><div class="line">		background: black;</div><div class="line">		width:180px;</div><div class="line">		height: 80px;</div><div class="line">		margin:auto;  /*宽高都居中*/</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<li>触发margin:auto计算有一个前提条件：width或height为auto时，元素是具有对应方向的自动填充特性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">一种方法</div><div class="line">.father&#123;</div><div class="line">		width:200px;</div><div class="line">		height: 100px;</div><div class="line">		position: relative;</div><div class="line">		background: red;</div><div class="line">	&#125;</div><div class="line">.son&#123;</div><div class="line">		position: absolute;</div><div class="line">		top:0;left:0;bottom: 0;right:0; /*格式化宽度和高度*/</div><div class="line">		background: black;</div><div class="line">		width:180px;</div><div class="line">		height: 80px;</div><div class="line">		margin:auto;  /*宽高都居中*/</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="margin无效情形"><a href="#margin无效情形" class="headerlink" title="margin无效情形"></a>margin无效情形</h3><p>1.display计算值inline的非替换元素的垂直margin是无效的<br>2.表格中的&lt;tr&gt;和&lt;td&gt;元素或则设置display计算值是table-cell或table-row的元素margin都无效<br>3.margin合并的时候，更改margin值可能是没有效果的，取决与合并计算规则<br>4.绝对定位元素非定位方向的margin值，能渲染，但看不到变化，也叫“无效”<br>5.定高容器的子元素的margin-bottom或则宽度定死的子元素的margin-right定位“失效”，和上一条原因类似<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.box&#123;height:100px;&#125;</div><div class="line">.son&#123;height:80px;margin-bottom:100px;&#125;</div><div class="line">margin-bottom不会形成100px的外边距</div><div class="line">- - -</div><div class="line">.box&#123;width:100px;&#125;</div><div class="line">.son&#123;width:80px;margin-left:100px;&#125;</div><div class="line">*经自己测试后，这种情况虽然对该设置的元素的定位</div><div class="line">没影响，但是仍会影响后面的元素布局。</div></pre></td></tr></table></figure></p>
 <p> 6.鞭长莫及导致的margin无效。<br> 7.内联特性导致的margin无效</p>
 <h2 id="border属性"><a href="#border属性" class="headerlink" title="border属性"></a>border属性</h2><p> 　　这块内容不是很多，都是先前遇到的。<br> 1.首先是border-width不支持百分比值。<br> 2.border-style默认值none。<br> 3.border-width默认值media（3px），原因是width为media时style为double才能有表现<br> <img src="http://p3cvr28fw.bkt.clouddn.com/p2.jpg" alt="规则" title="书中图片"><br> 4.当没有指定border-color颜色值的时候，会使用当前元素的color计算值作为边框色<br> 5.border也可以像padding那样增加点击区域，只是设置颜色为透明<br> 6.图像绘制这些之前接触过，就不赘述了</p>
+<p> #第5章 内联元素与流<br>  这一章的内容不多，但是比较难懂，尤其是vertical-align这块，属性的对齐方式很多。</p>
+<p>##字母X<br>1.x-height指的就是小写字母x的高度，而vertical-align:middle指的是基线往上1/2x-height的高度，即字母x中间那个点的位置。因为文字和其他一些字母都比x略高，毕竟是基于基线对齐的，使得字母x明显有个下沉的感觉，也因此设置middle垂直居中的元素是近似居中。<br>2.ex这个单位第一次见过，指的是小写字母x的高度，其高度也受字母字号的大小，可以使用它来应用于一个小图标天然垂直居中，并不受前面文字大小变化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.icon-arrow&#123;</div><div class="line">	display:inline-block;</div><div class="line">	width:20px;</div><div class="line">	height:1ex;</div><div class="line">	background:url();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>##line-height<br>1.对于非替换的纯内联元素，其可视高度完全由line-height决定<br>2.对于块状元素设置行高，若也出现高度，原因仍然是其内部的空白节点。<br>3.line-height之所以起作用，是通过改变“行距”来实现，“行距”分布在当前文字的上方和下方。行距=line-height-font-size。<br>4.line-height可以让单行或多行元素近似垂直居中，原因在于css中“行距的上下等分机制”，而近似垂直居中的原因是文字字形的垂直中线位置普遍要比真正的“行框盒子”的垂直中线位置低。<br>5.line-height的三类属性值：数值/1.5、百分比、长度值。区别在于继承上，长度值得话没特别，继承下来的就是定值，而百分比继承下来的值仍然是父元素中计算好的值，数值则是继承下来后，再按照当前元素的字体字号进行计算。<br>6.行框盒子的高度是由高度最高的那个“内联盒子”决定的</p>
+<p>##vertical-align<br>  vertical-align属性值分为：线类，如baseline(默认)、top、middle、bottom；文本类，text-top、text-bottom;上下标类，sub、super;数值百分比类，20px,2em,20%。<br>1.vertical-align默认值为baseline,即基线对齐，基线的定义就是字母x的下边缘，当设置为数值时，正值往上偏，负值往下偏。<br>2.vertical-align的百分值是相对于line-height计算的，而line-height的百分比值是相对于字号计算的<br>3.该属性起只能应用在内联元素或display为table-cell的元素上<br>4.默认值baseline在文本之类的内联元素那里就是字符x的下边缘，如果是inline-block元素，若里面没有内联元素，或者overflow不是visible,则该元素的基线就是其margin底边缘，否则其基线就是元素里面最后一行内联元素的基线<br>5.vertical-align:top就是垂直上边缘对齐。bottom相反。具体定义：</p>
+<ul>
+<li>内联元素：元素底部和当前行框盒子的顶部对齐</li>
+<li>table-cell元素：元素底padding边缘和表格行的顶部对齐<br>6.middle与近似垂直居中</li>
+<li>内联元素：元素的垂直中心点和行框盒子基线往上1/2x-height处对齐</li>
+<li>table-cell元素：单元格填充盒子相对于外面的表格行居中对齐<br>7.vertical-align:text-top:盒子的顶部和父级内容区域的顶部对齐。vertical-align:text-bottom:盒子的底部和父级内容区域的底部对齐。“父级内容区域”指的是父级元素当前font-size和font-family下应有的内容区域大小。</li>
+</ul>
 
       
     </div>
@@ -537,7 +547,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
+            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
           
         </div>
       
@@ -682,7 +692,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
