@@ -118,7 +118,7 @@
 <meta property="og:url" content="http://liuruchao.com/2018/04/16/js高程-最佳实践/index.html">
 <meta property="og:site_name" content="刘如超的博客">
 <meta property="og:description" content="这部分内容虽说是理论性的，但我觉得其重要性不亚于js的基础语法，我在读完这部分后知道了如何正确规范的书写自己的代码，好的代码不仅是可以让自己方便维护，重要的是能让别人更快的读懂，并开展维护及工作。1.首先是代码的约定  可读性：要想让代码可维护，它得是可读的，重要的是写注释。（1）每个函数和方法都应该包含一个注释，用来描述其作用或者参数的含义。（2）在大段代码前放置一个描述任务的注释。（3）如">
-<meta property="og:updated_time" content="2018-04-16T11:01:43.368Z">
+<meta property="og:updated_time" content="2018-04-16T11:16:20.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js高程-最佳实践">
 <meta name="twitter:description" content="这部分内容虽说是理论性的，但我觉得其重要性不亚于js的基础语法，我在读完这部分后知道了如何正确规范的书写自己的代码，好的代码不仅是可以让自己方便维护，重要的是能让别人更快的读懂，并开展维护及工作。1.首先是代码的约定  可读性：要想让代码可维护，它得是可读的，重要的是写注释。（1）每个函数和方法都应该包含一个注释，用来描述其作用或者参数的含义。（2）在大段代码前放置一个描述任务的注释。（3）如">
@@ -409,9 +409,16 @@
 <li>避免全局量：最多创建一个全局变量，让其他对象和函数存在其中。单一的全局量的延伸便是命名空间的概念</li>
 <li>避免与null进行比较：验证数据类型时，可以直接用typeof或instanceof,这样可以阻止非法值，不必用null　　</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function sortArray(values)&#123;</div><div class="line">	if(values instanceof Array)&#123;</div><div class="line">		values.sort(comparator);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">~~~　　</div><div class="line"></div><div class="line">+ 使用常量：将数据从应用逻辑分离出来的思想，可以在不冒引入错误的风险的同时，就改变数据</div></pre></td></tr></table></figure>
-<p>var Constants={<br>    INVALID_VALUE_MSG:”Invalid value”,<br>    INVALID_VALUE_URL:”/errors/invalid.php”<br>};<br>function validate(value){<br>    if(!value){<br>        alert(Constants.INVALID_VALUE_MSG);<br>        location.href=Constants.INVALID_INVALID_URL;<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">4.性能</div><div class="line">+ 注意作用域：只要能减少花费在作用域链上的时间，就能增加脚本的整体性能。（1）避免全局查找，可以将多次用到的全局对象存储为局部变量。（2）避免使用with语句，会增加作用域链的长度</div></pre></td></tr></table></figure></p>
-<p>function updateUI(){<br>    var doc=document;<br>    var imgs=doc.getElementsByTagName(“img”);<br>    for(var i=0,len=imgs.length;i&lt;len;i++){<br>        imgs[i].title=doc.title+”image”+i;<br>    }<br>}<br>~~~</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function sortArray(values)&#123;</div><div class="line">	if(values instanceof Array)&#123;</div><div class="line">		values.sort(comparator);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>使用常量：将数据从应用逻辑分离出来的思想，可以在不冒引入错误的风险的同时，就改变数据　　</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var Constants=&#123;</div><div class="line">	INVALID_VALUE_MSG:&quot;Invalid value&quot;,</div><div class="line">	INVALID_VALUE_URL:&quot;/errors/invalid.php&quot;</div><div class="line">&#125;;</div><div class="line">function validate(value)&#123;</div><div class="line">	if(!value)&#123;</div><div class="line">		alert(Constants.INVALID_VALUE_MSG);</div><div class="line">		location.href=Constants.INVALID_INVALID_URL;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>4.性能</p>
+<ul>
+<li>注意作用域：只要能减少花费在作用域链上的时间，就能增加脚本的整体性能。（1）避免全局查找，可以将多次用到的全局对象存储为局部变量。（2）避免使用with语句，会增加作用域链的长度</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function updateUI()&#123;</div><div class="line">	var doc=document;</div><div class="line">	var imgs=doc.getElementsByTagName(&quot;img&quot;);</div><div class="line">	for(var i=0,len=imgs.length;i&lt;len;i++)&#123;</div><div class="line">		imgs[i].title=doc.title+&quot;image&quot;+i;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li>选择正确方法：（1）避免不必要的属性查找、算法值从简到繁：O(1)常数 &lt; O(log n)对数 &lt; O(n)线性 &lt; O(n*n)平方。（2）优化查询：减值迭代、简化终止条件、简化循环体、使用后测试循环，如for循环和while循环是前测试循环，do-while是后循环，可以避免最初终止条件的计算，因此运行更快</li>
 <li>多个变量声明可以使用一个var,之间用逗号隔开　　</li>
@@ -422,6 +429,7 @@
 <li>使用事件代理　　　</li>
 </ul>
 <p>6.部署：将代码分离成多个文件只是为了提高可维护性，并非为了部署。要进行部署的时候，需要将这些源代码合并为一个或几个归并文件。</p>
+<p><em>ps:分享一个小提示，当我发布这篇博客时，遇到了一个问题，就是发布上去的文章结构错乱，本来用<del>~包含的代码块没有正常包含，却包含住了下面的内容，研究了半个小时，偶然才发现该代码块结束的</del>~后面被我多敲了几个空格，使得该<del>~无效了，就和下一个代码块的开头</del>~合成了一个代码块，以后得注意这种问题</em></p>
 
       
     </div>
