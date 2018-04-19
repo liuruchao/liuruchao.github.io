@@ -111,17 +111,17 @@
 
 
 
-<meta name="description" content="ps：该博文持续更新，来记录自己未见过，或不常用的属性 calc()属性　　第一次见到这个属性是在《css揭秘》上，这个属性比较好懂，就是calculate()计算的意思，是一个函数。作用就是计算括号内表达式的值。  运算符可以是+,-,*,/,等四则运算 数值单位可以是em,rem,px或百分比值等,可混合使用 运算符之间要留有空格　　　　举个例子就知道怎么用了，当给一个块级元素设置100%">
+<meta name="description" content="ps：该博文持续更新，来记录自己未见过，或不常用的属性 calc()属性　　第一次见到这个属性是在《css揭秘》上，这个属性比较好懂，就是calculate()计算的意思，是一个函数。作用就是计算括号内表达式的值。  运算符可以是+ , - , * , / ,等四则运算 数值单位可以是em,rem,px或百分比值等,可混合使用 运算符之间要留有空格　　　　举个例子就知道怎么用了，当给一个块级元">
 <meta name="keywords" content="css补缺">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css非常用属性集合">
 <meta property="og:url" content="http://liuruchao.com/2018/04/19/css非常用属性集合/index.html">
 <meta property="og:site_name" content="刘如超的博客">
-<meta property="og:description" content="ps：该博文持续更新，来记录自己未见过，或不常用的属性 calc()属性　　第一次见到这个属性是在《css揭秘》上，这个属性比较好懂，就是calculate()计算的意思，是一个函数。作用就是计算括号内表达式的值。  运算符可以是+,-,*,/,等四则运算 数值单位可以是em,rem,px或百分比值等,可混合使用 运算符之间要留有空格　　　　举个例子就知道怎么用了，当给一个块级元素设置100%">
-<meta property="og:updated_time" content="2018-04-19T11:48:23.368Z">
+<meta property="og:description" content="ps：该博文持续更新，来记录自己未见过，或不常用的属性 calc()属性　　第一次见到这个属性是在《css揭秘》上，这个属性比较好懂，就是calculate()计算的意思，是一个函数。作用就是计算括号内表达式的值。  运算符可以是+ , - , * , / ,等四则运算 数值单位可以是em,rem,px或百分比值等,可混合使用 运算符之间要留有空格　　　　举个例子就知道怎么用了，当给一个块级元">
+<meta property="og:updated_time" content="2018-04-19T11:50:25.202Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css非常用属性集合">
-<meta name="twitter:description" content="ps：该博文持续更新，来记录自己未见过，或不常用的属性 calc()属性　　第一次见到这个属性是在《css揭秘》上，这个属性比较好懂，就是calculate()计算的意思，是一个函数。作用就是计算括号内表达式的值。  运算符可以是+,-,*,/,等四则运算 数值单位可以是em,rem,px或百分比值等,可混合使用 运算符之间要留有空格　　　　举个例子就知道怎么用了，当给一个块级元素设置100%">
+<meta name="twitter:description" content="ps：该博文持续更新，来记录自己未见过，或不常用的属性 calc()属性　　第一次见到这个属性是在《css揭秘》上，这个属性比较好懂，就是calculate()计算的意思，是一个函数。作用就是计算括号内表达式的值。  运算符可以是+ , - , * , / ,等四则运算 数值单位可以是em,rem,px或百分比值等,可混合使用 运算符之间要留有空格　　　　举个例子就知道怎么用了，当给一个块级元">
 
 
 
@@ -393,7 +393,7 @@
         <p>　　<strong><em>ps：该博文持续更新，来记录自己未见过，或不常用的属性</em></strong></p>
 <h1 id="calc-属性"><a href="#calc-属性" class="headerlink" title="calc()属性"></a>calc()属性</h1><p>　　第一次见到这个属性是在《css揭秘》上，这个属性比较好懂，就是calculate()计算的意思，是一个函数。作用就是计算括号内表达式的值。</p>
 <ul>
-<li>运算符可以是+,-,*,/,等四则运算</li>
+<li>运算符可以是+ , - , * , / ,等四则运算</li>
 <li>数值单位可以是em,rem,px或百分比值等,可混合使用</li>
 <li>运算符之间要留有空格<br>　　<br>　　举个例子就知道怎么用了，当给一个块级元素设置100%宽度时，此时元素就失去了流动性，若再添加padding,border等属性，就会增加额外的宽度值，现在的话可以用box-sizing属性来改变盒模型计算规则，但我们现在用calc来计算所需的宽度值，看代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;box&quot;&gt;</div><div class="line">   &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">.box&#123;</div><div class="line">	width:500px;</div><div class="line">&#125;</div><div class="line">.child&#123;</div><div class="line">	width:100%;  此时子元素宽度为父元素的500px</div><div class="line">	padding:20px;</div><div class="line">	border:20px solid;  加上这两个属性后实际宽度就是500px+40px+40px</div><div class="line">	              超出了父元素宽度，而影响布局，现在calc()登场</div><div class="line">	width:calc(100% - 20px * 2 - 20px * 2); 这样就计算出了实际宽度值，</div><div class="line">	                                        减轻了我们的负担</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
