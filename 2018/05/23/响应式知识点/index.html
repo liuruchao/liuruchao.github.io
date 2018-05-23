@@ -111,17 +111,17 @@
 
 
 
-<meta name="description" content="1.最常见的方式，采用绝对定位实现，然后用margin再往回拉半个元素的宽高度，这种方式不方便维护，一旦居中元素宽高度改变，也必须得重新计算设置margin.12345678910111213141516.outside&amp;#123;	width: 200px;	height: 200px;	position: relative;	background: red;&amp;#125;.inside&amp;#123">
+<meta name="description" content="媒体查询语法通过@media写在样式表中12345678body&amp;#123;	background:grey;&amp;#125;@media screen and (max-width:960px)&amp;#123;	body&amp;#123;		background:red;	&amp;#125;&amp;#125; 通过标签的media属性为样式表指定设备类型1&amp;lt;link rel=&amp;quot;stylesheet&amp;quo">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="几种垂直水平居中方法">
-<meta property="og:url" content="http://liuruchao.com/2018/03/06/几种垂直水平居中方法/index.html">
+<meta property="og:title" content="响应式知识点">
+<meta property="og:url" content="http://liuruchao.com/2018/05/23/响应式知识点/index.html">
 <meta property="og:site_name" content="刘如超的博客">
-<meta property="og:description" content="1.最常见的方式，采用绝对定位实现，然后用margin再往回拉半个元素的宽高度，这种方式不方便维护，一旦居中元素宽高度改变，也必须得重新计算设置margin.12345678910111213141516.outside&amp;#123;	width: 200px;	height: 200px;	position: relative;	background: red;&amp;#125;.inside&amp;#123">
-<meta property="og:updated_time" content="2018-05-15T13:26:29.542Z">
+<meta property="og:description" content="媒体查询语法通过@media写在样式表中12345678body&amp;#123;	background:grey;&amp;#125;@media screen and (max-width:960px)&amp;#123;	body&amp;#123;		background:red;	&amp;#125;&amp;#125; 通过标签的media属性为样式表指定设备类型1&amp;lt;link rel=&amp;quot;stylesheet&amp;quo">
+<meta property="og:updated_time" content="2018-05-23T12:04:07.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="几种垂直水平居中方法">
-<meta name="twitter:description" content="1.最常见的方式，采用绝对定位实现，然后用margin再往回拉半个元素的宽高度，这种方式不方便维护，一旦居中元素宽高度改变，也必须得重新计算设置margin.12345678910111213141516.outside&amp;#123;	width: 200px;	height: 200px;	position: relative;	background: red;&amp;#125;.inside&amp;#123">
+<meta name="twitter:title" content="响应式知识点">
+<meta name="twitter:description" content="媒体查询语法通过@media写在样式表中12345678body&amp;#123;	background:grey;&amp;#125;@media screen and (max-width:960px)&amp;#123;	body&amp;#123;		background:red;	&amp;#125;&amp;#125; 通过标签的media属性为样式表指定设备类型1&amp;lt;link rel=&amp;quot;stylesheet&amp;quo">
 
 
 
@@ -149,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://liuruchao.com/2018/03/06/几种垂直水平居中方法/"/>
+  <link rel="canonical" href="http://liuruchao.com/2018/05/23/响应式知识点/"/>
 
 
 
 
 
-  <title>几种垂直水平居中方法 | 刘如超的博客</title>
+  <title>响应式知识点 | 刘如超的博客</title>
   
 
 
@@ -304,7 +304,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://liuruchao.com/2018/03/06/几种垂直水平居中方法/">
+    <link itemprop="mainEntityOfPage" href="http://liuruchao.com/2018/05/23/响应式知识点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘如超">
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">几种垂直水平居中方法</h1>
+          <h1 class="post-title" itemprop="name headline">响应式知识点</h1>
         
 
         <div class="post-meta">
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T22:39:02+08:00">
-                2018-03-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-23T20:00:45+08:00">
+                2018-05-23
               </time>
             
 
@@ -390,15 +390,15 @@
       
 
       
-        <p>1.最常见的方式，采用绝对定位实现，然后用margin再往回拉半个元素的宽高度，这种方式不方便维护，一旦居中元素宽高度改变，也必须得重新计算设置margin.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">.outside&#123;</div><div class="line">	width: 200px;</div><div class="line">	height: 200px;</div><div class="line">	position: relative;</div><div class="line">	background: red;</div><div class="line">&#125;</div><div class="line">.inside&#123;</div><div class="line">	width: 60px;</div><div class="line">	height: 60px;</div><div class="line">	background: green;</div><div class="line">	position: absolute;</div><div class="line">	left: 50%;</div><div class="line">	top:50%;</div><div class="line">	margin-left:-30px;</div><div class="line">	margin-top: -30px;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
-<p>2.基于第一种方式，可以将使用margin改为css3中变形的translate,使用百分比来将居中元素拉回中间位置，使用百分比数值就避免了还得计算居中元素的宽高度，缺陷可能是不太兼容低版本浏览器，也得加上私有前缀<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> .inside&#123;</div><div class="line">       -webkit-transform: translate(-50%,-50%);</div><div class="line">	   -moz-transform: translate(-50%,-50%);</div><div class="line">	   -o-transform: translate(-50%,-50%);</div><div class="line">	   transform: translate(-50%,-50%);//百分比根据元素宽高度计算</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>3.这种方式是从《css世界》上看到的，核心是利用到了“strut”支柱这个概念,另外这种垂直居中是一种近似居中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">.outside&#123;</div><div class="line">	  width: 200px;</div><div class="line">	  height: 200px;</div><div class="line">	  background: red;</div><div class="line">	  line-height: 200px;</div><div class="line">	  text-align: center;</div><div class="line">	&#125;</div><div class="line">.inside&#123;</div><div class="line">	  width: 60px;</div><div class="line">	  height: 60px;</div><div class="line">	  background: green;</div><div class="line">	  display: inline-block;</div><div class="line">	  vertical-align: middle;</div><div class="line">           &#125;</div></pre></td></tr></table></figure></p>
-<p>4.这个方法是最方便的，用到了新的弹性布局，只需要设置父元素即可，缺点是兼容性问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.outside&#123;</div><div class="line">		  width: 200px;</div><div class="line">		  height: 200px;</div><div class="line">		  background: red;</div><div class="line">		  display: flex;</div><div class="line">		  justify-content: center;</div><div class="line">		  align-items: center;</div><div class="line">		&#125;</div></pre></td></tr></table></figure></p>
-<p>5.对第3种方式的一个补充，如果居中元素的父元素高度不定，或者得经常修改高度，那么使用line-height的方式就显得有些麻烦了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">.outside&#123;</div><div class="line">	position:fixed;</div><div class="line">	top:0;left:0;bottom:0;right:0;</div><div class="line">	text-align: center;</div><div class="line">	font-size: 0;//x中心点处于最上缘</div><div class="line">	background: red;</div><div class="line">	white-space: nowrap;</div><div class="line">	overflow: auto;</div><div class="line">&#125;</div><div class="line"> .outside:after&#123;</div><div class="line">	content: &apos;&apos;;</div><div class="line">	display: inline-block;</div><div class="line">	height: 100%;//通过改变数值，可以调整在垂直方向的位置</div><div class="line">	vertical-align:middle;//设置后，原理上该伪元素一半位置在.outside外面</div><div class="line">	，但由于css默认是左上方排列对齐的，所以伪元素和容器上边缘的x的中心点一起下移了半个容器，处于中心点</div><div class="line">&#125;</div><div class="line"> .inside&#123;</div><div class="line">	height: 100px;</div><div class="line">	width: 100px;</div><div class="line">	display: inline-block;</div><div class="line">	vertical-align:middle;//接着和伪元素的中心点对齐，就垂直居中了</div><div class="line">	background: lime;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>6.兼容性良好，甚至不需要考虑父容器的尺寸，用到了绝对定位的格式化宽高度产生的流体特性，我很看好这种方式，当然不是我想到的，哈哈<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.inside&#123;</div><div class="line">	     width:100px;</div><div class="line">	     height:100px;</div><div class="line">	     position:absolute;</div><div class="line">	     top:0;left:0;right:0;bottom:0;</div><div class="line">	     margin:auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>7.父元素设置display:table-cell;好处是子元素垂直居中无需考虑height的值，块级元素和内联元素都可垂直居中，只不过水平居中设置上会不同<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.outside&#123;</div><div class="line">	width:200px;</div><div class="line">	height:200px;</div><div class="line">	background:red;</div><div class="line">	display:table-cell;</div><div class="line">	veritcal-align:middle;</div><div class="line">	text-align:center; //针对内联元素水平居中设置</div><div class="line">&#125;</div><div class="line">.inside&#123;</div><div class="line">	width:100px;</div><div class="line">	height:100px;</div><div class="line">	display:inline-block;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><em>ps:如果发现其它方法我会继续补充</em></p>
-
+        <h1 id="媒体查询语法"><a href="#媒体查询语法" class="headerlink" title="媒体查询语法"></a>媒体查询语法</h1><h2 id="通过-media写在样式表中"><a href="#通过-media写在样式表中" class="headerlink" title="通过@media写在样式表中"></a>通过@media写在样式表中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">	background:grey;</div><div class="line">&#125;</div><div class="line">@media screen and (max-width:960px)&#123;</div><div class="line">	body&#123;</div><div class="line">		background:red;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="通过标签的media属性为样式表指定设备类型"><a href="#通过标签的media属性为样式表指定设备类型" class="headerlink" title="通过标签的media属性为样式表指定设备类型"></a>通过<link>标签的media属性为样式表指定设备类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen and (oriention:portrait) and (min-width:800px)&quot; href=&quot;test.css&quot;&gt;</div></pre></td></tr></table></figure>
+<p>限制只有视口宽度大于800像素的显示器设备上才能加载文件</p>
+<h2 id="使用css的-import指令再当前样示表中按条件引入其它样式表，该方法会增加http请求（影响加载速度）"><a href="#使用css的-import指令再当前样示表中按条件引入其它样式表，该方法会增加http请求（影响加载速度）" class="headerlink" title="使用css的@import指令再当前样示表中按条件引入其它样式表，该方法会增加http请求（影响加载速度）"></a>使用css的@import指令再当前样示表中按条件引入其它样式表，该方法会增加http请求（影响加载速度）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@import url(&quot;phone.css&quot;) screen and (max-width:360px);</div></pre></td></tr></table></figure>
+<h1 id="媒体查询检测的特性"><a href="#媒体查询检测的特性" class="headerlink" title="媒体查询检测的特性"></a>媒体查询检测的特性</h1><p>1.width:视口宽度<br>2.height：视口高度<br>3.device-width:设备屏幕的宽度<br>4.device-height:设备屏幕的高度<br>5.orientation：检测设备处于横向还是纵向<br>6.aspect-ration:基于视口宽度和高度的宽高比，如aspect-ration: 16/9</p>
+<h1 id="meta标签适配移动端"><a href="#meta标签适配移动端" class="headerlink" title="meta标签适配移动端"></a>meta标签适配移动端</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure>
+<h1 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h1><p>1.用百分比数值：目标元素宽度÷上下文元素宽度<br>2.用em代替px<br>3.弹性图片：max-width</p>
+<h1 id="媒体查询内的选择器优先级情况"><a href="#媒体查询内的选择器优先级情况" class="headerlink" title="媒体查询内的选择器优先级情况"></a>媒体查询内的选择器优先级情况</h1><p>在媒体查询大括号内的的选择器，如果符合查询条件后，相同的选择器权重下的代码会覆盖掉原先的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.box .content&#123;</div><div class="line">			background:green;</div><div class="line">			height: 100px;</div><div class="line">			position: absolute;</div><div class="line">		&#125;</div><div class="line">@media all and (max-width: 600px)&#123;</div><div class="line">		.box .content&#123;</div><div class="line">				background: orange;</div><div class="line">				height: 200px;</div><div class="line">				position: static;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">\\此时媒体查询内的css代码覆盖原先的，若选择器权重小于原先的，则不能生效</div></pre></td></tr></table></figure></p>
+<h1 id="通过适配根元素的font-size值来改变rem-达到响应式开发"><a href="#通过适配根元素的font-size值来改变rem-达到响应式开发" class="headerlink" title="通过适配根元素的font-size值来改变rem,达到响应式开发"></a>通过适配根元素的font-size值来改变rem,达到响应式开发</h1>
       
     </div>
 
@@ -440,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/06/3D正方体/" rel="next" title="3D正方体">
-                <i class="fa fa-chevron-left"></i> 3D正方体
+              <a href="/2018/04/19/css非常用属性集合/" rel="next" title="css非常用属性集合">
+                <i class="fa fa-chevron-left"></i> css非常用属性集合
               </a>
             
           </div>
@@ -449,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/31/好的习惯决定了走多远/" rel="prev" title="好的习惯决定了走多远">
-                好的习惯决定了走多远 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -525,8 +521,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -588,6 +593,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#媒体查询语法"><span class="nav-number">1.</span> <span class="nav-text">媒体查询语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-media写在样式表中"><span class="nav-number">1.1.</span> <span class="nav-text">通过@media写在样式表中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过标签的media属性为样式表指定设备类型"><span class="nav-number">1.2.</span> <span class="nav-text">通过标签的media属性为样式表指定设备类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用css的-import指令再当前样示表中按条件引入其它样式表，该方法会增加http请求（影响加载速度）"><span class="nav-number">1.3.</span> <span class="nav-text">使用css的@import指令再当前样示表中按条件引入其它样式表，该方法会增加http请求（影响加载速度）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#媒体查询检测的特性"><span class="nav-number">2.</span> <span class="nav-text">媒体查询检测的特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#meta标签适配移动端"><span class="nav-number">3.</span> <span class="nav-text">meta标签适配移动端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#响应式设计"><span class="nav-number">4.</span> <span class="nav-text">响应式设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#媒体查询内的选择器优先级情况"><span class="nav-number">5.</span> <span class="nav-text">媒体查询内的选择器优先级情况</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通过适配根元素的font-size值来改变rem-达到响应式开发"><span class="nav-number">6.</span> <span class="nav-text">通过适配根元素的font-size值来改变rem,达到响应式开发</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
